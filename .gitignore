@@ -1,20 +1,34 @@
-# Java / Maven
-*.class
-bin/
-out/
+HELP.md
 target/
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea/
-/data/
+data/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Tomcat (se descarga aparte: https://tomcat.apache.org/)
-apache-tomcat-*/
-11-Recursos/apache-tomcat-11.0.26/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# Node
-node_modules/
-dist/
-# Secretos (nunca subir)
-.env
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
