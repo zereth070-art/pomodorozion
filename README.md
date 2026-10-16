@@ -37,4 +37,3 @@ Perfil `prod` (`application-prod.properties`) con variables de entorno:
 
 - [`docs/DOCUMENTACION-PROYECTO.md`](docs/DOCUMENTACION-PROYECTO.md): arquitectura, dominio, API y decisiones.
 - [`docs/TimerService.md`](docs/TimerService.md): lógica del temporizador.
-- [`docs/TRADUCCIONES-NODE-SPRING.md`](docs/TRADUCCIONES-NODE-SPRING.md): puente Node ↔ Spring.
