@@ -153,6 +153,14 @@ function renderTasks(filtradas) {
 taskSearch.addEventListener("input", applySearch);
 
 // === Timer ===
+// Duplicado de application.properties (25/5/15). Se sustituirá por
+// state.totalSeconds cuando el backend mande la duración de la fase.
+const DURACION_FASE = {
+  FOCUS: 25 * 60,
+  SHORT_BREAK: 5 * 60,
+  LONG_BREAK: 15 * 60,
+};
+
 function renderTimer(state) {
   document.getElementById("timer").textContent = formatTimer(
     state.remainingSeconds,
@@ -164,6 +172,11 @@ function renderTimer(state) {
 
   selectedTaskId = state.selectedTaskId;
   renderCycle(state.focusCountInCycle);
+  const ring = document.getElementById("timer-ring");
+  const total = DURACION_FASE[state.phase] || 1;
+  ring.style.setProperty("--proceso", (state.remainingSeconds / total) * 100);
+  ring.dataset.phase = state.phase;
+
 }
 document.getElementById("createBtn").addEventListener("click", createTask);
 
